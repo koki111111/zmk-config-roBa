@@ -75,8 +75,8 @@
             bindings = <
 &kp Q             &kp L           &kp U         &kp DOT       &kp QUESTION                                &kp F        &kp W             &kp R                &kp Y            &kp P
 &mt LEFT_GUI E    &mt LEFT_ALT I  &mt LCTRL A   &mt LSHIFT O  &kp COMMA     &none          &none          &kp K        &mt LEFT_SHIFT T  &mt RIGHT_CONTROL N  &mt RIGHT_ALT S  &lt 2 H
-&mt LEFT_SHIFT Z  &kp X           &kp C         &kp V         &kp B         &none          &none          &kp G        &kp D             &kp M                &kp J            &mt RIGHT_WIN B
-&kp LCTRL         &kp LEFT_ALT    &kp LEFT_GUI  &kp TAB       &lt 3 F13     &kp ENTER      &kp BACKSPACE  &lt 1 SPACE                                                          &none
+&mt LEFT_SHIFT Z  &kp X           &kp C         &kp V         &kp AT_SIGN   &none          &none          &kp G        &kp D             &kp M                &kp J            &mt RIGHT_WIN B
+&kp LCTRL         &kp LEFT_ALT    &kp LEFT_GUI  &kp TAB       &lt 3 F13     &kp ENTER      &kp BACKSPACE  &lt 1 SPACE                                                          &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -84,10 +84,10 @@
 
         number {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR    &kp PERCENT                      &kp AMPERSAND  &kp SQT   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERIOD
-&kp NUMBER_1     &kp N2             &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &none       &none  &kp NUMBER_6   &kp N7    &kp N8                &kp N9                 &kp N0
-&kp F1           &trans             &trans        &trans        &trans        &none       &none  &kp COLON      &kp PLUS  &kp MINUS             &kp ASTRK              &kp SLASH
-&trans           &trans             &trans        &trans        &trans        &trans      &mo 2  &trans                                                                &none
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR    &kp PERCENT                       &kp AMPERSAND  &kp SQT   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERIOD
+&kp NUMBER_1     &kp N2             &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &none        &none  &kp NUMBER_6   &kp N7    &kp N8                &kp N9                 &kp N0
+&kp F1           &kp F2             &kp F3        &kp F4        &kp F5        &none        &none  &kp COLON      &kp PLUS  &kp MINUS             &kp ASTRK              &kp SLASH
+&kp F6           &kp F7             &kp F8        &kp F9        &kp F10       &kp F11      &mo 2  &trans                                                                &kp F12
             >;
         };
 
