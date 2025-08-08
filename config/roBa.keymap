@@ -8,7 +8,11 @@
     quick-tap-ms = <0>;
 };
 
-&lt { flavor = "tap-preferred"; };
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <0>;
+};
 
 / {
     combos {
