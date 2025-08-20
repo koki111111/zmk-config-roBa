@@ -54,23 +54,25 @@
         };
     };
 
-    macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-    };
-
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
+        Outer_Finger_MT: Outer_Finger_MT {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            label = "OUTER_FINGER_MT";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+        };
+
+        Outer_Finger_LT: Outer_Finger_LT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "OUTER_FINGER_LT";
+            bindings = <&lt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -79,10 +81,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp L           &kp U        &kp DOT       &kp QUESTION                                &kp F        &kp W             &kp R                &kp Y            &kp P
-&mt LEFT_GUI E    &mt LEFT_ALT I  &mt LCTRL A  &mt LSHIFT O  &kp COMMA     &none          &none          &kp K        &mt LEFT_SHIFT T  &mt RIGHT_CONTROL N  &mt RIGHT_ALT S  &mt RIGHT_WIN H
-&mt LEFT_SHIFT Z  &kp X           &kp C        &kp V         &kp AT_SIGN   &none          &none          &kp G        &kp D             &kp M                &kp J            &lt 3 B
-&none             &none           &none        &kp TAB       &lt 3 F13     &kp ENTER      &kp BACKSPACE  &lt 1 SPACE                                                          &none
+&kp Q                          &kp L                        &kp U        &kp DOT       &kp QUESTION                                &kp F        &kp W             &kp R                &kp Y                         &kp P
+&Outer_Finger_MT LEFT_GUI E    &Outer_Finger_MT LEFT_ALT I  &mt LCTRL A  &mt LSHIFT O  &kp COMMA     &none          &none          &kp K        &mt LEFT_SHIFT T  &mt RIGHT_CONTROL N  &Outer_Finger_MT RIGHT_ALT S  &Outer_Finger_LT 3 H
+&Outer_Finger_MT LEFT_SHIFT Z  &kp X                        &kp C        &kp V         &kp AT_SIGN   &none          &none          &kp G        &kp D             &kp M                &kp J                         &Outer_Finger_MT RIGHT_WIN B
+&none                          &none                        &none        &kp TAB       &lt 3 F13     &kp ENTER      &kp BACKSPACE  &lt 1 SPACE                                                                       &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
