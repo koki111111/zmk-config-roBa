@@ -86,8 +86,6 @@
 &Outer_Finger_MT LEFT_SHIFT Z  &kp X                        &kp C        &kp V         &kp AT_SIGN   &none          &none          &kp G        &kp D             &kp M                &kp J                         &Outer_Finger_MT RIGHT_WIN B
 &none                          &none                        &none        &kp TAB       &lt 3 F13     &kp ENTER      &kp BACKSPACE  &lt 1 SPACE                                                                       &none
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         number {
